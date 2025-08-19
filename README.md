@@ -77,7 +77,7 @@ npm run dev
 
 ### Things to improve upon
 
-- avoid having same files (checking content. But, impossible for huge files)
+- Avoid having same files (checking content. But, impossible for huge files)
 - Having filters for search to choose type/tags on documents.
 ---
 
