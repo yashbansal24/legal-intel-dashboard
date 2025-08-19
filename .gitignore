@@ -40,6 +40,9 @@ dist/
 site/
 /temp/
 /uploads/
+*.pdf
+*.docx
+*.doc
 
 */#/
 

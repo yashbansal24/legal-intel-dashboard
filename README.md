@@ -1,4 +1,4 @@
-# Legal Documents Dashboard — Production-Ready Take‑Home
+# Legal Documents Dashboard — Qanooni.ai 
 
 A full‑stack, production‑minded implementation of the **Legal Documents Dashboard** challenge. 
 This can handle more than 10s of thousands of users, with attention to reliability, observability, graceful shutdown. 
@@ -30,8 +30,10 @@ Storage
 ### Design Choices
 
 - **FastAPI + Gunicorn/Uvicorn** ASGI server with graceful shutdown, request timeouts and body limits.
+![Dashboard screenshot](documentation/dashboard.png)
 
 - **SQLite** for storing documents information. Migrations and models are portable to **Postgres**.
+![Search screenshot](documentation/search.png)
 
 - **Batch/aggregate APIs** to avoid N+1 fetches from the frontend. The dashboard is computed server-side in one call.
 
@@ -42,6 +44,7 @@ Storage
 - **Resilience patterns**: bounded retries, exponential backoff, server timeouts.
 
 - **Background processing**: ingestion uses an in-memory background tasks queue; can be offloaded to Celery/RQ with Redis via `tasks/` for large volumes. 
+![Upload screenshot](documentation/upload.png)
 
 - **Security**: CORS allowlist, content-type & size checks, basic rate limiting, dependency pinning, headers that disable sniffing, and robust error handler.
 
@@ -70,6 +73,12 @@ npm i
 npm run dev
 ```
 
+---
+
+### Things to improve upon
+
+- avoid having same files (checking content. But, impossible for huge files)
+- Having filters for search to choose type/tags on documents.
 ---
 
 ## Production Deployment Notes
