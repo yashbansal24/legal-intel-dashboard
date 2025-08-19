@@ -1,0 +1,69 @@
+# node / frontend
+node_modules
+dist
+.npmrc
+pnpm-lock.yaml
+yarn.lock
+
+# python / backend
+.venv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.env.*
+.coverage
+htmlcov
+.sqlite*
+*.db
+
+# common python caches & tooling
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.cache/
+.pyre/
+.pytype/
+__pypackages__/
+*.egg-info/
+.eggs/
+*.egg
+pip-wheel-metadata/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# build & dist
+build/
+dist/
+site/
+/temp/
+/uploads/
+
+*/#/
+
+# coverage & profiling
+.coverage.*
+coverage.xml
+*.prof
+*.py[cod]
+
+# notebooks
+.ipynb_checkpoints/
+
+# virtualenv variations
+.venv*/
+venv/
+env/
+
+# editor
+.DS_Store
+.idea
+.vscode
+
+# build outputs
+*.log
+*.sqlite
+*.sqlite3
+*.zip
