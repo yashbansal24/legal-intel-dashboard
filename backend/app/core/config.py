@@ -17,6 +17,9 @@ class Settings(BaseSettings):
 
     MAX_UPLOAD_MB: int = 20
     REQUEST_TIMEOUT_S: int = 25
+    RATE_LIMIT_WINDOW_S: int = Field(default=60, description="Sliding window in seconds")
+    RATE_LIMIT_MAX_REQUESTS: int = Field(default=120, description="Max requests per window per IP")
+    SHUTDOWN_GRACE_PERIOD_S: int = Field(default=10, description="Max seconds to wait for in-flight requests to finish on shutdown")
 
     class Config:
         env_file = ".env"
