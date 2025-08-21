@@ -27,6 +27,8 @@ Storage
 
 - Dependency Injection and Repository Patten
 
+- Placeholder for **LangGraph** enabled agent to search over documents
+
 - **FastAPI + Gunicorn/Uvicorn** ASGI server with graceful shutdown, request timeouts and body limits.
 
 ![Dashboard screenshot](documentation/dashboard.png)
